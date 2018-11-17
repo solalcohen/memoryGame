@@ -2,40 +2,66 @@
 <html>
 
 <head>
-    <title>memoryGame</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Geostar+Fill" rel="stylesheet">    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/memoryGame.css">
-    <style>
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/memoryGame.css">
+    <title>MemoryGame</title>
 </head>
 
 <body>
-   <h1>Memory Game</h1>
+    <h1>Memory Game</h1>
+<button>New Game</button>
     <div class='container'>
         <div class='row '>
-                <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-                <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-                <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-                <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card0' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card1' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card2' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card3' class='tableau'></div>
+            </div>
         </div>
         <div class='row '>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card4' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card5' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card6' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card7' class='tableau'></div>
+            </div>
         </div>
 
         <div class='row '>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
-            <div class='ml-2 col-sm-3 col-xs-6'><div class='tableau'></div></div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card8' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card9' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card10' class='tableau'></div>
+            </div>
+            <div class='col-sm-3 col-xs-6'>
+                <div id='card11' class='tableau'></div>
+            </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="./js/memoryGame.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

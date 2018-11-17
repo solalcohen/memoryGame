@@ -6,11 +6,14 @@ body{
     height: 100vh;
 }
 
-
+.button{
+    height:100px;
+    width:30px;
+}
 .tableau{
     border: 1px solid black;
-    height: 200px;
-    width: 171px;
+    height: 184px;
+    width: 135px;
     background-image: url('../image/panini.PNG');
     background-size: contain;
     margin: 10px;
@@ -21,4 +24,8 @@ h1{
     text-align:center;
     font-family: 'Geostar Fill', cursive;
     color:black;
+}
+
+.click-disabled{
+    pointer-events: none;
 }
