@@ -2,9 +2,10 @@ var Memory = {};
 Memory_images = [`url('./image/cristiano.jpg')`, `url('./image/messi.jpg')`, `url('./image/maradona.jpeg')`, `url('./image/pele.png')`, `url('./image/Ronaldo.png')`, `url('./image/Zidane.png')`, `url('./image/cristiano.jpg')`, `url('./image/messi.jpg')`, `url('./image/maradona.jpeg')`, `url('./image/pele.png')`, `url('./image/Ronaldo.png')`, `url('./image/Zidane.png')`];
 
 Memory.start = function () {
-  Memory.clickoff();
-  Memory.dispatch()
+  Memory.dispatch();
   Memory.check();
+  Memory.clickoff();
+  Memory.newGame();
 };
 
 Memory.dispatch = function () {
@@ -15,23 +16,17 @@ Memory.dispatch = function () {
     var index = Memory_images.indexOf(random_url);
     Memory_images.splice(index, 1);
     $(card).prepend('<img src ="./image/panini.PNG">');
-    $('img').css("height", "185px");
-    $('img').css("width", "135");
+    $('img').css("height", "187px");
+    $('img').css("width", "137");
   }
-};
-
-Memory.clickoff = function () {
-  $('.tableau').click(function () {
-    if ($(this).attr("src") != "./image/panini.PNG") {
-      $(this).addClass("click-disabled");
-    }
-  })
 };
 
 Memory.check = function () {
   var click = [];
+  var counter = 0;
   $('.tableau').click(function (event) {
     $(event.target).hide();
+    console.log(event.target)
     click.push($(this));
     if (click.length === 2) {
       if (click[0].css('background-image') != click[1].css('background-image')) {
@@ -41,19 +36,40 @@ Memory.check = function () {
         setTimeout(function () {
           first.prepend('<img src ="./image/panini.PNG">');
           second.prepend('<img src ="./image/panini.PNG">');
-          $('img').css("height", "185px");
-          $('img').css("width", "135");
+          $('img').css("height", "187px");
+          $('img').css("width", "137");
           $(".tableau").removeClass("click-disabled");
         }, 1000);
 
+      }
+      else {
+        counter += 1;
+        console.log(counter);
+        if (counter === 6) {
+          $('.modal').css('display', 'block');
+
+        }
       }
       click = [];
     }
   });
 
 }
+Memory.clickoff = function () {
+  $('.tableau').click(function () {
+    if ($(this).attr("src") != "./image/panini.PNG") {
+      $(this).addClass("click-disabled");
+    }
+  })
+};
+
+Memory.newGame = function () {
+  $('button').click(function () {
+    location.reload();
+  });
+}
+
+
 Memory.start();
-
-
 
 
